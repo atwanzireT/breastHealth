@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">breastHealth</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tips">Use this app for educational purposes and self-awareness only. If you suspect any health concerns, seek immediate medical attention from a qualified healthcare professional for proper diagnosis and treatment.</string>
+    <string name="cancer">Malignant tumors are cancerous growths of cells that have the ability to invade nearby tissues and spread to other parts of the body .</string>
+    <string name="healthy">Benign tumors are non-cancerous growths of cells that do not spread to other parts of the body.</string>
+</resources>

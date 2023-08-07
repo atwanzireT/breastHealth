@@ -1,0 +1,160 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <!-- Wrap the content in a NestedScrollView -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/bodyScrolView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--            <com.github.mikephil.charting.charts.BarChart-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="300dp"-->
+                <!--                android:layout_margin="7dp"-->
+                <!--                android:id="@+id/barChart"-->
+                <!--                android:background="@color/white"-->
+                <!--                android:layout_below="@+id/txtresult"/>-->
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/idimagecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20sp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/idImageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_200"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/idresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/purple_500"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/idconf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/gray_700"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/idextraconf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/purple_500"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/notLeaftxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Not A Leaf, Upload a Cassava Leaf to Diagnose"
+                        android:layout_gravity="center"
+                        android:textSize="24dp"
+                        android:textAlignment="center"
+                        android:textColor="#ff0000"
+                        android:layout_margin="20dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/idtips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="20dp"/>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/bodyScrolView">
+            <Button
+                android:id="@+id/idPredictBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/btnLy"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/gray_200"
+                android:text="Diagnose"
+                android:textColor="@color/purple_500" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/idCamerabtn"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Take A Picture"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_photo_camera"
+                    android:layout_marginHorizontal="2dp"/>
+
+                <Button
+                    android:id="@+id/idGallerybtn"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select An Image"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/gray_50"
+                    app:icon="@drawable/ic_baseline_add_photo"
+                    android:layout_marginHorizontal="2dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+</FrameLayout>
